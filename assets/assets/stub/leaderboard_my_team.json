@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "teamId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      "teamImage": "string",
+      "weekRank": 2,
+      "seansonRank": 0,
+      "weekScore": 120,
+      "seasonScore": 0,
+      "name": "user 111111111",
+      "teamName": "Liverpool",
+      "bonus": 0
+    },{
+      "teamId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      "teamImage": "string",
+      "weekRank": 3,
+      "seansonRank": 0,
+      "weekScore": 120,
+      "seasonScore": 0,
+      "name": "user 111111111",
+      "teamName": "Liverpool",
+      "bonus": 0
+    },{
+      "teamId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      "teamImage": "string",
+      "weekRank": 4,
+      "seansonRank": 0,
+      "weekScore": 120,
+      "seasonScore": 0,
+      "name": "user 111111111",
+      "teamName": "Liverpool",
+      "bonus": 0
+    },{
+      "teamId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      "teamImage": "string",
+      "weekRank": 5,
+      "seansonRank": 0,
+      "weekScore": 120,
+      "seasonScore": 0,
+      "name": "user 111111111",
+      "teamName": "Liverpool",
+      "bonus": 0
+    },{
+      "teamId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      "teamImage": "string",
+      "weekRank": 6,
+      "seansonRank": 0,
+      "weekScore": 120,
+      "seasonScore": 0,
+      "name": "user 111111111",
+      "teamName": "Liverpool",
+      "bonus": 0
+    },{
+      "teamId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      "teamImage": "string",
+      "weekRank": 7,
+      "seansonRank": 0,
+      "weekScore": 120,
+      "seasonScore": 0,
+      "name": "user 111111111",
+      "teamName": "Liverpool",
+      "bonus": 0
+    }
+  ],
+  "status": 200,
+  "message": "string"
+}

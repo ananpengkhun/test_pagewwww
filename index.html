@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <script type="text/javascript">
+     var clevertap = {event:[], profile:[], region : 'sg1', account:[], onUserLogin:[], notifications:[],privacy:[]};
+ clevertap.account.push({"id": "R7R-855-995Z"});
+ (function () {
+ var wzrk = document.createElement('script');
+ wzrk.type = 'text/javascript';
+ wzrk.async = true;
+ wzrk.src = ('https:' == document.location.protocol ? 'https://d2r1yp2w7bby2u.cloudfront.net' : 'http://static.clevertap.com') + '/js/a.js';
+ var s = document.getElementsByTagName('script')[0];
+ s.parentNode.insertBefore(wzrk, s);
+  })();
+</script>
+    <meta name="google-signin-client_id"
+          content="441811997411-no437ge6i6tts0kosk7g1jcb0i1khln9.apps.googleusercontent.com">
+    <meta charset="UTF-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="description" content="GG Live provides you complete and the most updated football news, analyses, stats, and results exclusively to you.">
+
+<!--    <meta http-equiv="Cache-control" content="public,max-age=300">-->
+
+    <!-- iOS meta tags & icons -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="GG Live">
+    <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+
+    <title>GG Live</title>
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+<!-- This script installs service_worker.js to provide PWA functionality to
+     application. For more information, see:
+     https://developers.google.com/web/fundamentals/primers/service-workers -->
+<script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('flutter_service_worker.js');
+      });
+    }
+
+
+</script>
+
+<script >
+  function uploadEventLogin(eventName,content){
+
+   console.log("asdasdasd :"+eventName);
+    clevertap.event.push(eventName,{
+        "Method Used" : content
+    });
+  }
+
+  function uploadEventSignUp(eventName,regisOp,status){
+
+   console.log("asdasdasd :"+eventName);
+    clevertap.event.push(eventName,{
+        'Register Option': regisOp,
+        'Status' : status
+    });
+  }
+
+  function uploadEventFantasy(eventName){
+
+   console.log("asdasdasd :"+eventName);
+    clevertap.event.push(eventName);
+  }
+
+</script>
+<!-- Firebase App is always required and must be first -->
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+<!-- Add additional services that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js"></script>
+
+<script>
+    var firebaseConfig = {
+    apiKey: "AIzaSyD137sl87lLxV3FJ04ehc8K6JXlyym_Kzo",
+    authDomain: "gg-live-287008.firebaseapp.com",
+    databaseURL: "https://gg-live-287008.firebaseio.com",
+    projectId: "gg-live-287008",
+    storageBucket: "gg-live-287008.appspot.com",
+    messagingSenderId: "245702358683",
+    appId: "1:245702358683:web:ef8af6029c828f41c2f83e",
+    measurementId: "G-2V5DGGCX7W"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
+</script>
+
+<script src="main.dart.js?version=15" type="application/javascript"></script>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '344889890256334',
+      cookie     : true,
+      xfbml      : true,
+      version    : 'v8.0',
+      status     : true,
+    });
+
+    FB.AppEvents.logPageView();
+
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+
+</script>
+
+</body>
+</html>

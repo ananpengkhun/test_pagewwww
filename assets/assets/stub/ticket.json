@@ -1,0 +1,78 @@
+{
+    "status": 200,
+    "message": "",
+    "data": [
+        {
+            "ticketId": "376b3356-eff5-4767-b889-7bd26737b057",
+            "type": 0,
+            "status": 0,
+            "expiredAt": "2020-09-08T00:00:00"
+        },
+        {
+            "ticketId": "6aabaa57-bd07-4724-8587-334a550d9582",
+            "type": 0,
+            "status": 2,
+            "expiredAt": "2020-09-08T00:00:00"
+        },
+        {
+            "ticketId": "6aabaa57-bd07-4724-8587-334a550d9582",
+            "type": 0,
+            "status": 2,
+            "expiredAt": "2020-09-08T00:00:00"
+        },
+        {
+            "ticketId": "6aabaa57-bd07-4724-8587-334a550d9582",
+            "type": 0,
+            "status": 2,
+            "expiredAt": "2020-09-08T00:00:00"
+        },
+        {
+            "ticketId": "6aabaa57-bd07-4724-8587-334a550d9582",
+            "type": 0,
+            "status": 2,
+            "expiredAt": "2020-09-08T00:00:00"
+        },
+        {
+            "ticketId": "6aabaa57-bd07-4724-8587-334a550d9582",
+            "type": 0,
+            "status": 2,
+            "expiredAt": "2020-09-08T00:00:00"
+        },
+        {
+            "ticketId": "6aabaa57-bd07-4724-8587-334a550d9582",
+            "type": 1,
+            "status": 2,
+            "expiredAt": "2020-09-08T00:00:00"
+        },
+        {
+            "ticketId": "6aabaa57-bd07-4724-8587-334a550d9582",
+            "type": 1,
+            "status": 2,
+            "expiredAt": "2020-09-08T00:00:00"
+        },
+        {
+            "ticketId": "6aabaa57-bd07-4724-8587-334a550d9582",
+            "type": 1,
+            "status": 2,
+            "expiredAt": "2020-09-08T00:00:00"
+        },
+        {
+            "ticketId": "6aabaa57-bd07-4724-8587-334a550d9582",
+            "type": 1,
+            "status": 2,
+            "expiredAt": "2020-09-08T00:00:00"
+        },
+        {
+            "ticketId": "6aabaa57-bd07-4724-8587-334a550d9582",
+            "type": 1,
+            "status": 2,
+            "expiredAt": "2020-09-08T00:00:00"
+        },
+        {
+            "ticketId": "6aabaa57-bd07-4724-8587-334a550d9582",
+            "type": 1,
+            "status": 2,
+            "expiredAt": "2020-09-08T00:00:00"
+        }
+    ]
+}

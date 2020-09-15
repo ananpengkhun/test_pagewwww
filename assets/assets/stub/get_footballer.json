@@ -1,0 +1,89 @@
+{
+  "data": {
+    "data": {
+      "footballerId": "string",
+      "clubId": "string",
+      "club": {
+        "clubId": "string",
+        "clubName": "Leicester City",
+        "clubLogoUrl": "string",
+        "shirtUrl": "string"
+      },
+      "name": "Jamie Vardy",
+      "footballerNumber": "string",
+      "role": 0,
+      "pictureUrl": "https://resources.premierleague.com/premierleague/photos/players/250x250/p101668.png",
+      "portraitUrl": "string",
+      "price": 0,
+      "score": 0,
+      "totalPoints": 0,
+      "roundPoints": 0,
+      "teamSelectedByPercentage": 0,
+      "minutesPlayed": 0,
+      "goalsScored": 0,
+      "assists": 0,
+      "cleanSheets": 0,
+      "pointPerMatch": 0,
+      "transferIN": 0,
+      "transferOUT": 0,
+      "ownGoals": 0,
+      "goalsConceded": 0,
+      "penaltiesSave": 0,
+      "penaltiesMissed": 0,
+      "yellowCard": 0,
+      "redCard": 0,
+      "save": 0,
+      "ict": 0
+    },
+    "history": [
+      {
+        "goalsScored": 0,
+        "assists": 0,
+        "cleanSheets": 0,
+        "ownGoals": 0,
+        "goalsConceded": 0,
+        "penaltiesSave": 0,
+        "penaltiesMissed": 0,
+        "yellowCard": 0,
+        "redCard": 0,
+        "save": 0,
+        "clubName": "Leicester City",
+        "oppent": "man u",
+        "gameType": 1,
+        "homeScore": 0,
+        "awayScore": 0,
+        "gameWeek": 0,
+        "socre": 0
+      },{
+        "goalsScored": 0,
+        "assists": 0,
+        "cleanSheets": 0,
+        "ownGoals": 0,
+        "goalsConceded": 0,
+        "penaltiesSave": 0,
+        "penaltiesMissed": 0,
+        "yellowCard": 0,
+        "redCard": 0,
+        "save": 0,
+        "clubName": "Leicester City",
+        "oppent": "man u",
+        "gameType": 2,
+        "homeScore": 0,
+        "awayScore": 0,
+        "gameWeek": 0,
+        "socre": 0
+      }
+    ],
+    "fixtures": [
+      {
+        "gameWeek": 0,
+        "clubName": "liverpool",
+        "oppent": "man u",
+        "gameType": 1,
+        "fixtureDate": "2020-08-03T04:10:28.783Z"
+      }
+    ]
+  },
+  "status": 0,
+  "message": "string"
+}
