@@ -1,11 +1,12 @@
 {
-    "name": "GG Live",
-    "short_name": "GG",
+    "gcm_sender_id": "245702358683",
+    "name": "Khobsanam GG",
+    "short_name": "Khobsanam GG",
     "start_url": ".",
     "display": "minimal-ui",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "GG Live provides you complete and the most updated football news, analyses, stats, and results exclusively to you.",
+    "description": "Khobsanam GG provides you complete and the most updated football news, analyses, stats, and results exclusively to you.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

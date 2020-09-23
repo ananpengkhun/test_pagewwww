@@ -1,0 +1,8 @@
+{
+  "websiteName": "GG",
+  "websitePushID": "web.app.web.gg-live-287008",
+  "allowedDomains": ["https://gg-live-287008.web.app"],
+  "urlFormatString": "https://gg-live-287008.web.app/%@/?flight=%@",
+  "authenticationToken": "184f091c87a84cf1952008207b43cd63",
+  "webServiceURL": "https://gg-live-287008.web.app/push"
+}

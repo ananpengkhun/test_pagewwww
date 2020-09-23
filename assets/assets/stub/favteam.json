@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "title": "Arsenal",
+      "subtitle": "",
+      "id": "6",
+      "type": "TEAM",
+      "thumbnail": "https://icons.iconarchive.com/icons/giannis-zographos/english-football-club/256/Arsenal-FC-icon.png",
+      "favourite": false,
+      "noti": false
+    },
+    {
+      "title": "Everton",
+      "subtitle": "",
+      "id": "7",
+      "type": "TEAM",
+      "thumbnail": "https://icons.iconarchive.com/icons/giannis-zographos/english-football-club/256/Arsenal-FC-icon.png",
+      "favourite": false,
+      "noti": false
+    },
+    {
+      "title": "Liverpool",
+      "subtitle": "",
+      "id": "8",
+      "type": "TEAM",
+      "thumbnail": "https://icons.iconarchive.com/icons/giannis-zographos/english-football-club/256/Arsenal-FC-icon.png",
+      "favourite": false,
+      "noti": false
+    },
+    {
+      "title": "Paris",
+      "subtitle": "",
+      "id": "9",
+      "type": "TEAM",
+      "thumbnail": "https://icons.iconarchive.com/icons/giannis-zographos/english-football-club/256/Arsenal-FC-icon.png",
+      "favourite": false,
+      "noti": false
+    },
+    {
+      "title": "Juventus",
+      "subtitle": "",
+      "id": "10",
+      "type": "TEAM",
+      "thumbnail": "https://icons.iconarchive.com/icons/giannis-zographos/english-football-club/256/Arsenal-FC-icon.png",
+      "favourite": false,
+      "noti": false
+    },
+    {
+      "title": "Barcelona",
+      "subtitle": "",
+      "id": "11",
+      "type": "TEAM",
+      "thumbnail": "https://icons.iconarchive.com/icons/giannis-zographos/english-football-club/256/Arsenal-FC-icon.png",
+      "favourite": false,
+      "noti": false
+    }
+  ],
+  "status": 200,
+  "message": "ok"
+}

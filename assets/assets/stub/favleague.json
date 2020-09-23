@@ -1,0 +1,51 @@
+{
+  "data": [
+    {
+      "title": "Premier League",
+      "subtitle": "",
+      "id": "1",
+      "type": "LEAGUE",
+      "thumbnail": "https://freepngimg.com/download/premier_league/32207-5-premier-league-file.png",
+      "favourite": false,
+      "noti": false
+    },
+    {
+      "title": "Laliga",
+      "subtitle": "",
+      "id": "2",
+      "type": "LEAGUE",
+      "thumbnail": "https://freepngimg.com/download/premier_league/32207-5-premier-league-file.png",
+      "favourite": false,
+      "noti": false
+    },
+    {
+      "title": "Serie A",
+      "subtitle": "",
+      "id": "3",
+      "type": "LEAGUE",
+      "thumbnail": "https://freepngimg.com/download/premier_league/32207-5-premier-league-file.png",
+      "favourite": false,
+      "noti": false
+    },
+    {
+      "title": "Bundes Liga",
+      "subtitle": "",
+      "id": "4",
+      "type": "LEAGUE,TEAM",
+      "thumbnail": "https://freepngimg.com/download/premier_league/32207-5-premier-league-file.png",
+      "favourite": false,
+      "noti": false
+    },
+    {
+      "title": "Ligue 1",
+      "subtitle": "",
+      "id": "5",
+      "type": "LEAGUE",
+      "thumbnail": "https://freepngimg.com/download/premier_league/32207-5-premier-league-file.png",
+      "favourite": false,
+      "noti": false
+    }
+  ],
+  "status": 200,
+  "message": "ok"
+}

@@ -1,85 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- Static Cache Control -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-remote-config.js"></script>
 
     <script type="text/javascript">
-     var clevertap = {event:[], profile:[], region : 'sg1', account:[], onUserLogin:[], notifications:[],privacy:[]};
- clevertap.account.push({"id": "R7R-855-995Z"});
- (function () {
- var wzrk = document.createElement('script');
- wzrk.type = 'text/javascript';
- wzrk.async = true;
- wzrk.src = ('https:' == document.location.protocol ? 'https://d2r1yp2w7bby2u.cloudfront.net' : 'http://static.clevertap.com') + '/js/a.js';
- var s = document.getElementsByTagName('script')[0];
- s.parentNode.insertBefore(wzrk, s);
-  })();
-</script>
-    <meta name="google-signin-client_id"
-          content="441811997411-no437ge6i6tts0kosk7g1jcb0i1khln9.apps.googleusercontent.com">
-    <meta charset="UTF-8">
-    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-    <meta name="description" content="GG Live provides you complete and the most updated football news, analyses, stats, and results exclusively to you.">
 
-<!--    <meta http-equiv="Cache-control" content="public,max-age=300">-->
-
-    <!-- iOS meta tags & icons -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="GG Live">
-    <link rel="apple-touch-icon" href="icons/Icon-192.png">
-
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
-
-    <title>GG Live</title>
-    <link rel="manifest" href="manifest.json">
-</head>
-<body>
-<!-- This script installs service_worker.js to provide PWA functionality to
-     application. For more information, see:
-     https://developers.google.com/web/fundamentals/primers/service-workers -->
-<script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', function () {
-        navigator.serviceWorker.register('flutter_service_worker.js');
-      });
-    }
-
-
-</script>
-
-<script >
-  function uploadEventLogin(eventName,content){
-
-   console.log("asdasdasd :"+eventName);
-    clevertap.event.push(eventName,{
-        "Method Used" : content
-    });
-  }
-
-  function uploadEventSignUp(eventName,regisOp,status){
-
-   console.log("asdasdasd :"+eventName);
-    clevertap.event.push(eventName,{
-        'Register Option': regisOp,
-        'Status' : status
-    });
-  }
-
-  function uploadEventFantasy(eventName){
-
-   console.log("asdasdasd :"+eventName);
-    clevertap.event.push(eventName);
-  }
-
-</script>
-<!-- Firebase App is always required and must be first -->
-<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
-<!-- Add additional services that you want to use -->
-<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js"></script>
-
-<script>
     var firebaseConfig = {
     apiKey: "AIzaSyD137sl87lLxV3FJ04ehc8K6JXlyym_Kzo",
     authDomain: "gg-live-287008.firebaseapp.com",
@@ -94,9 +27,174 @@
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
 
+     var clevertap = {event:[], profile:[], region : 'sg1', account:[], onUserLogin:[], notifications:[],privacy:[]};
+ clevertap.account.push({"id": "R7R-855-995Z"});
+ (function () {
+ var wzrk = document.createElement('script');
+ wzrk.type = 'text/javascript';
+ wzrk.async = true;
+ wzrk.src = ('https:' == document.location.protocol ? 'https://d2r1yp2w7bby2u.cloudfront.net' : 'http://static.clevertap.com') + '/js/a.js';
+ var s = document.getElementsByTagName('script')[0];
+ s.parentNode.insertBefore(wzrk, s);
+  })();
+
+  var remoteConfig = firebase.remoteConfig();
+  remoteConfig.settings = {
+    minimumFetchIntervalMillis: 3600000,
+  };
+  remoteConfig.defaultConfig = ({
+    'gg_rule_url': 'Welcome',
+  });
+  remoteConfig.ensureInitialized()
+  .then(() => {
+    console.log('Firebase Remote Config is initialized');
+    console.log('Firebase Remote ' + remoteConfig.getValue('gg_rule_url')._value + "::" + remoteConfig.getValue('gg_rule_url')._source );
+
+  })
+  .catch((err) => {
+    console.error('Firebase Remote Config failed to initialize', err);
+
+  });
+
+
+</script>
+    <meta name="google-signin-client_id"
+          content="441811997411-no437ge6i6tts0kosk7g1jcb0i1khln9.apps.googleusercontent.com">
+    <meta charset="UTF-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="description" content="Khobsanam GG provides you complete and the most updated football news, analyses, stats, and results exclusively to you.">
+
+    <!-- iOS meta tags & icons -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Khobsanam GG">
+    <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+
+    <title>Khobsanam GG</title>
+    <link rel="manifest" href="/manifest.json">
+</head>
+<body>
+<!-- This script installs service_worker.js to provide PWA functionality to
+     application. For more information, see:
+     https://developers.google.com/web/fundamentals/primers/service-workers -->
+<script>
+
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('flutter_service_worker.js');
+      });
+    }
+
+
+
+
 </script>
 
-<script src="main.dart.js?version=15" type="application/javascript"></script>
+<script >
+
+
+  function createInitWebPush(name,id,email){
+    clevertap.profile.push({
+        "Site": {
+            "Name": name,
+            "Email": email,
+            "Identity": id
+        }
+    });
+    clevertap.notifications.push({
+      "apnsWebPushId" : "web.com.sd-mobile",
+      "apnsWebPushServiceUrl" : "https://safaritestpush.herokuapp.com",
+      "titleText":'Would you like to receive Push Notifications?',
+      "bodyText":'We promise to only send you relevant content and give you updates on your transactions',
+      "okButtonText":'Sign me up!',
+      "rejectButtonText":'No thanks',
+      "okButtonColor":'#f28046',
+      "serviceWorkerPath" : "clevertap_sw.js"
+      });
+  }
+
+  function cleverTapLoginSocial(eventName){
+    clevertap.event.push(eventName);
+  }
+
+  function uploadEventLogin(eventName,key,value){
+
+   console.log("eventName :"+eventName);
+    clevertap.event.push(eventName,{
+        key : value
+    });
+  }
+
+  function uploadEventSignUp(eventName){
+
+   console.log("eventName :"+eventName);
+    clevertap.event.push(eventName);
+  }
+
+  function uploadEventFantasy(eventName){
+
+   console.log("eventName :"+eventName);
+    clevertap.event.push(eventName);
+  }
+
+  function uploadEventFantasyPlayGame(eventName){
+    clevertap.event.push(eventName);
+  }
+
+  function uploadEventSubscript(eventName,key,value){
+        clevertap.event.push(eventName,{
+            key : value
+        });
+  }
+
+  function uploadEventStats(eventName){
+    clevertap.event.push(eventName);
+  }
+
+  function uploadEventMyProfile(eventName,key,value){
+        clevertap.event.push(eventName,{
+            key : value
+        });
+  }
+
+  async function fetchFirebase(){
+
+  let listCallback = new Map();
+  await remoteConfig.fetchAndActivate()
+  .then(() => {
+    listCallback['how_to_play_url'] = remoteConfig.getValue('how_to_play_url')._value;
+    listCallback['ticket_term_url'] = remoteConfig.getValue('ticket_term_url')._value;
+    listCallback['gg_rule_url_th'] = remoteConfig.getValue('gg_rule_url_th')._value;
+    listCallback['gg_livescore_web'] = remoteConfig.getValue('gg_livescore_web')._value;
+    listCallback['gg_news_web'] = remoteConfig.getValue('gg_news_web')._value;
+    listCallback['gg_base_endpoint'] = remoteConfig.getValue('gg_base_endpoint')._value;
+    listCallback['gg_stat_endpoint'] = remoteConfig.getValue('gg_stat_endpoint')._value;
+    listCallback['gg_user_endpoint'] = remoteConfig.getValue('gg_user_endpoint')._value;
+    listCallback['gg_package_endpoint'] = remoteConfig.getValue('gg_package_endpoint')._value;
+    listCallback['gg_force_update_flag'] = remoteConfig.getValue('gg_force_update_flag')._value;
+    listCallback['gg_current_appversion'] = remoteConfig.getValue('gg_current_appversion')._value;
+    listCallback['gg_rule_url'] = remoteConfig.getValue('gg_rule_url')._value;
+    listCallback['gg_term_url'] = remoteConfig.getValue('gg_term_url')._value;
+    listCallback['fb_message'] = remoteConfig.getValue('fb_message')._value;
+    listCallback['stat_api_key'] = remoteConfig.getValue('stat_api_key')._value;
+    listCallback['gg_fav_endpoint'] = remoteConfig.getValue('gg_fav_endpoint')._value;
+
+     rules = JSON.stringify(listCallback);
+  })
+  .catch((err) => {
+    console.error('Firebase Remote Config failed to initialize', err);
+    rules = "nulllll";
+  });
+  return rules;
+  }
+
+
+</script>
+
+<script src="main.dart.js?version=28" type="application/javascript"></script>
 <script>
   window.fbAsyncInit = function() {
     FB.init({

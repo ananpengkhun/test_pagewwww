@@ -73,7 +73,7 @@
     "label_award_season" :  "Season",
     "label_award_game_week" : "Game week",
     "label_award_points" :  "Points",
-    "label_award_bonus" : "Bonus",
+    "label_award_bonus" : "Reward",
     "label_award_pos" :  "No.",
     "label_award_total_points" : "Total Points",
 
@@ -81,11 +81,11 @@
     "label_edit" : "Edit",
     "label_name" :  "Name*",
     "label_lastname" : "Lastname*",
-    "label_id_card" :  "ID Card/Passport No.",
-    "label_account_no" : "Account No.",
-    "label_account_name" :  "Account Name",
-    "label_branch_name" : "Branch Name",
-    "label_book_bank_cert" :  "Book Bank Certification",
+    "label_id_card" :  "ID Card/Passport No.*",
+    "label_account_no" : "Account No.*",
+    "label_account_name" :  "Bank Name*",
+    "label_branch_name" : "Branch Name*",
+    "label_book_bank_cert" :  "Book Bank Certification*",
     "label_cancel" : "Cancel",
     "label_save" :  "Save",
     "label_edit_successful" : "Edit Bank Account Successful",
@@ -155,7 +155,7 @@
     "label_regis_name" :  "Name*",
     "label_regis_lastname" : "Lastname*",
     "label_regis_mobile" :"Mobile No.*",
-    "label_regis_email" : "Email*",
+    "label_regis_email" : "Email/Username*",
     "label_regis_password" :  "Password*",
     "label_regis_confirm_password" : "Confirm Password*",
     "label_register_succ" : "Register Successful",
@@ -173,7 +173,7 @@
     "label_social_cancel" :  "Cancel",
     "label_social_continue" : "Agree",
 
-    "label_login_username" :  "Username",
+    "label_login_username" :  "Email/Username",
     "label_login_password" : "Password",
     "label_login_forgot_pass" :  "Forgot Password",
     "label_login_login" : "Sign In",
@@ -227,7 +227,7 @@
   "label_fantasy_home_winners_gameweek" : "Winners of Gameweek",
   "label_fantasy_home_pos" :  "No.",
   "label_fantasy_home_points" : "Points",
-  "label_fantasy_home_bonus" :  "Bonus",
+  "label_fantasy_home_bonus" :  "Reward",
   "label_fantasy_home_overall_ranking" : "Overall Ranking ",
   "label_fantasy_home_season_ranking" :  "Season Ranking",
   "label_fantasy_home_team" : "Team",
@@ -289,8 +289,10 @@
   "label_transfers_edit_transfer" : "Edit Team",
   "label_transfers_time_out" : "Transfer time out in GW",
   "label_transfers_effect_nextgame" : "This transfer will take effect next game week",
-  "label_transfers_confirm_transfer" : "Confirm Transfer",
+  "label_transfers_confirm_transfer" : "Confirm",
   "label_transfers_please_select_captain" : "Please Select Captain",
+  "label_transfers_confirm_team_title" : "Confirm Team",
+  "label_transfers_confirm_team_message" : "After submitting the team, you cannot change the team anymore.",
 
   "label_nodata" : "No Data",
   "system_not_avai_title" : "Sorry",
@@ -300,7 +302,10 @@
   "label_by_registering" : "Please agree to our Term of Service ",
   "label_log_in_pin" : "Sign in PIN",
 
-  "label_ticket_detail" : "Fantasy Premier League is LIVE !!!\n\nWhen you register for premium package with us, you will not miss our exclusive contents for football fan like you. Together with a chance to play Fantasy Football game and you can win great prizes !!!",
+  "label_ticket_detail" : "Fantasy Football is LIVE !!!\n\nYou can buy premium package for",
+  "label_ticket_detail2" : "from",
+  "label_ticket_detail3" : "to",
+  "label_ticket_detail4" : "When you register for premium package with us. you will not miss our exclusive contents for football fan like you. Together with a chance to play Fantasy Football game and you can win great prizes !!!",
 
   "label_exit_app" : "Would you like to exit my GG Live Application?",
   "label_logout_app" :"Would, you like to logout my GG Live Application?",
@@ -407,7 +412,9 @@
   "label_stat_season_corners_taken":"Corners Taken",
 
   "label_common_ok" :  "OK",
-  "label_common_cancel" :  "Cancel"
+  "label_common_cancel" :  "Cancel",
+  "label_force_update_title": "Khobsanam GG is updated",
+  "label_force_update_message" :  "Please update your application to version"
 }
 
 
