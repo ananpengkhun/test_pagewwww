@@ -2,9 +2,9 @@
 <html>
 <head>
     <!-- Static Cache Control -->
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
+<!--    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">-->
+<!--    <meta http-equiv="Pragma" content="no-cache">-->
+<!--    <meta http-equiv="Expires" content="0">-->
 
     <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-auth.js"></script>
@@ -95,13 +95,15 @@
 
 <script >
 
-
-  function createInitWebPush(name,id,email){
+  function createInitWebPush(name,id,email,phone,photo){
     clevertap.profile.push({
         "Site": {
             "Name": name,
+            "Identity": id,
             "Email": email,
-            "Identity": id
+            "Phone": phone,
+            "Photo": photo,
+            "MSG-push": true,
         }
     });
     clevertap.notifications.push({
@@ -194,7 +196,7 @@
 
 </script>
 
-<script src="main.dart.js?version=28" type="application/javascript"></script>
+<script src="main.dart.js?version=34" type="application/javascript"></script>
 <script>
   window.fbAsyncInit = function() {
     FB.init({
