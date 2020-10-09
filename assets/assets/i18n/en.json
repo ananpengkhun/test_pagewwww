@@ -419,7 +419,18 @@
   "label_common_ok" :  "OK",
   "label_common_cancel" :  "Cancel",
   "label_force_update_title": "Khobsanam GG is updated",
-  "label_force_update_message" :  "Please update your application to version"
+  "label_force_update_message" :  "Please update your application to version",
+  "label_validate_teamprofile_cancel": "You have not setup named and picture your team yet, please click confirm to go to the team setting page.",
+  "label_validate_teamprofile_image": "You have not setup picture your team yet",
+  "label_validate_teamprofile_name": "You have not setup named your team yet",
+
+  "label_fav_league": "League Favorite",
+  "label_fav_team": "Team Favorite",
+  "label_league": "League",
+  "label_team": "Team",
+  "label_fav_skip": "Skip",
+  "label_fav_next": "Next",
+  "label_fav_hint_search": "Search.."
 }
 
 

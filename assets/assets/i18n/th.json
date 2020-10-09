@@ -420,5 +420,16 @@
   "label_common_ok" :  "ตกลง",
   "label_common_cancel" :  "ยกเลิก",
   "label_force_update_title": "Khobsanam GG is updated",
-  "label_force_update_message" :  "กรุณาอัพเดทแอปพลิเคชั่นเป็นเวอร์ชั่น"
+  "label_force_update_message" :  "กรุณาอัพเดทแอปพลิเคชั่นเป็นเวอร์ชั่น",
+  "label_validate_teamprofile_cancel": "คุณยังไม่ได้ตั้งค่าชื่อและรูปทีม กดยืนยันเพื่อไปยังหน้าตั้งค่าทีม",
+  "label_validate_teamprofile_image": "คุณยังไม่ได้ตั้งค่ารูปทีม",
+  "label_validate_teamprofile_name": "คุณยังไม่ได้ตั้งค่าชื่อทีม",
+
+  "label_fav_league": "ลีคที่คุณชื่นชอบ",
+  "label_fav_team": "ทีมที่คุณชื่นชอบ",
+  "label_league": "ลีค",
+  "label_team": "ทีม",
+  "label_fav_skip": "ข้าม",
+  "label_fav_next": "ต่อไป",
+  "label_fav_hint_search": "ค้นหา.."
 }

@@ -1,225 +1,341 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <!-- Static Cache Control -->
-<!--    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">-->
-<!--    <meta http-equiv="Pragma" content="no-cache">-->
-<!--    <meta http-equiv="Expires" content="0">-->
+  <!-- Static Cache Control -->
+  <!--    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">-->
+  <!--    <meta http-equiv="Pragma" content="no-cache">-->
+  <!--    <meta http-equiv="Expires" content="0">-->
 
-    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-remote-config.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-remote-config.js"></script>
 
-    <script type="text/javascript">
+  <link rel='stylesheet prefetch'
+        href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+  <link rel='stylesheet prefetch' href='https://foliotek.github.io/Croppie/croppie.css'>
+  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+  <script src='https://foliotek.github.io/Croppie/croppie.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+
+
+  <script type="text/javascript">
 
     var firebaseConfig = {
-    apiKey: "AIzaSyD137sl87lLxV3FJ04ehc8K6JXlyym_Kzo",
-    authDomain: "gg-live-287008.firebaseapp.com",
-    databaseURL: "https://gg-live-287008.firebaseio.com",
-    projectId: "gg-live-287008",
-    storageBucket: "gg-live-287008.appspot.com",
-    messagingSenderId: "245702358683",
-    appId: "1:245702358683:web:ef8af6029c828f41c2f83e",
-    measurementId: "G-2V5DGGCX7W"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-
-     var clevertap = {event:[], profile:[], region : 'sg1', account:[], onUserLogin:[], notifications:[],privacy:[]};
- clevertap.account.push({"id": "R7R-855-995Z"});
- (function () {
- var wzrk = document.createElement('script');
- wzrk.type = 'text/javascript';
- wzrk.async = true;
- wzrk.src = ('https:' == document.location.protocol ? 'https://d2r1yp2w7bby2u.cloudfront.net' : 'http://static.clevertap.com') + '/js/a.js';
- var s = document.getElementsByTagName('script')[0];
- s.parentNode.insertBefore(wzrk, s);
-  })();
-
-  var remoteConfig = firebase.remoteConfig();
-  remoteConfig.settings = {
-    minimumFetchIntervalMillis: 3600000,
-  };
-  remoteConfig.defaultConfig = ({
-    'gg_rule_url': 'Welcome',
-  });
-  remoteConfig.ensureInitialized()
-  .then(() => {
-    console.log('Firebase Remote Config is initialized');
-    console.log('Firebase Remote ' + remoteConfig.getValue('gg_rule_url')._value + "::" + remoteConfig.getValue('gg_rule_url')._source );
-
-  })
-  .catch((err) => {
-    console.error('Firebase Remote Config failed to initialize', err);
-
-  });
+      apiKey: "AIzaSyD137sl87lLxV3FJ04ehc8K6JXlyym_Kzo",
+      authDomain: "gg-live-287008.firebaseapp.com",
+      databaseURL: "https://gg-live-287008.firebaseio.com",
+      projectId: "gg-live-287008",
+      storageBucket: "gg-live-287008.appspot.com",
+      messagingSenderId: "245702358683",
+      appId: "1:245702358683:web:ef8af6029c828f41c2f83e",
+      measurementId: "G-2V5DGGCX7W"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
 
 
-</script>
-    <meta name="google-signin-client_id"
-          content="441811997411-no437ge6i6tts0kosk7g1jcb0i1khln9.apps.googleusercontent.com">
-    <meta charset="UTF-8">
-    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-    <meta name="description" content="Khobsanam GG provides you complete and the most updated football news, analyses, stats, and results exclusively to you.">
+    var clevertap = { event: [], profile: [], region: 'sg1', account: [], onUserLogin: [], notifications: [], privacy: [] };
+    clevertap.account.push({ "id": "R7R-855-995Z" });
+    (function () {
+      var wzrk = document.createElement('script');
+      wzrk.type = 'text/javascript';
+      wzrk.async = true;
+      wzrk.src = ('https:' == document.location.protocol ? 'https://d2r1yp2w7bby2u.cloudfront.net' : 'http://static.clevertap.com') + '/js/a.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wzrk, s);
+    })();
 
-    <!-- iOS meta tags & icons -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Khobsanam GG">
-    <link rel="apple-touch-icon" href="icons/Icon-192.png">
+    var remoteConfig = firebase.remoteConfig();
+    remoteConfig.settings = {
+      minimumFetchIntervalMillis: 3600000,
+    };
+    remoteConfig.defaultConfig = ({
+      'gg_rule_url': 'Welcome',
+    });
+    remoteConfig.ensureInitialized()
+      .then(() => {
+        console.log('Firebase Remote Config is initialized');
+        //console.log('Firebase Remote ' + remoteConfig.getValue('gg_rule_url')._value + "::" + remoteConfig.getValue('gg_rule_url')._source );
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+      })
+      .catch((err) => {
+        console.error('Firebase Remote Config failed to initialize', err);
 
-    <title>Khobsanam GG</title>
-    <link rel="manifest" href="/manifest.json">
+      });
+
+  </script>
+  <meta name="google-signin-client_id"
+        content="441811997411-no437ge6i6tts0kosk7g1jcb0i1khln9.apps.googleusercontent.com">
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description"
+        content="Khobsanam GG provides you complete and the most updated football news, analyses, stats, and results exclusively to you.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Khobsanam GG">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/png" href="favicon.png" />
+
+  <title>Khobsanam GG</title>
+  <link rel="manifest" href="/manifest.json">
 </head>
+
 <body>
 <!-- This script installs service_worker.js to provide PWA functionality to
-     application. For more information, see:
-     https://developers.google.com/web/fundamentals/primers/service-workers -->
+   application. For more information, see:
+   https://developers.google.com/web/fundamentals/primers/service-workers -->
+
 <script>
 
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {
-        navigator.serviceWorker.register('flutter_service_worker.js');
+        navigator.serviceWorker.register('flutter_service_worker.js?version=35_3');
       });
+    }
+
+    var resource;
+
+    $('document').ready(function(){
+      console.log("onreadyonreadyonreadyonreadyonready")
+      var image_crop = $('#upload-demo').croppie({
+        viewport: {
+          width: 600,
+          height: 300,
+          type: 'square'
+        },
+        boundary: {
+          width: 650,
+          height: 350
+        }
+      });
+
+      $('#cropImagePop').on('shown.bs.modal', function (e) {
+        image_crop.croppie('bind', {
+          url: 'data:image/jpeg;base64,' + bytesToBase64(resource)
+        });
+      })
+
+      $('#cropImageBtn').click(function () {
+        console.log('clickkkkkkk')
+        image_crop.croppie('result', { type: 'blob', format: 'png' }).then(function (blob) {
+
+
+
+        });
+      });
+    });
+
+
+
+
+
+
+  </script>
+
+<script>
+
+
+
+    function createInitWebPush(name, id, email, phone, photo) {
+      clevertap.profile.push({
+        "Site": {
+          "Name": name,
+          "Identity": id,
+          "Email": email,
+          "Photo": photo,
+          "MSG-push": true,
+        }
+      });
+      clevertap.notifications.push({
+        "apnsWebPushId": "web.com.sd-mobile",
+        "apnsWebPushServiceUrl": "https://safaritestpush.herokuapp.com",
+        "titleText": 'Would you like to receive Push Notifications?',
+        "bodyText": 'We promise to only send you relevant content and give you updates on your transactions',
+        "okButtonText": 'Sign me up!',
+        "rejectButtonText": 'No thanks',
+        "okButtonColor": '#f28046',
+        "serviceWorkerPath": "clevertap_sw.js"
+      });
+    }
+
+    function cleverTapLoginSocial(eventName) {
+      clevertap.event.push(eventName);
+    }
+
+    function uploadEventLogin(eventName, key, value) {
+
+      console.log("eventName :" + eventName);
+      clevertap.event.push(eventName, {
+        key: value
+      });
+    }
+
+    function uploadEventSignUp(eventName) {
+
+      console.log("eventName :" + eventName);
+      clevertap.event.push(eventName);
+    }
+
+    function uploadEventFantasy(eventName) {
+
+      console.log("eventName :" + eventName);
+      clevertap.event.push(eventName);
+    }
+
+    function uploadEventFantasyPlayGame(eventName) {
+      clevertap.event.push(eventName);
+    }
+
+    function uploadEventSubscript(eventName, key, value) {
+      clevertap.event.push(eventName, {
+        key: value
+      });
+    }
+
+    function uploadEventStats(eventName) {
+      clevertap.event.push(eventName);
+    }
+
+    function uploadEventMyProfile(eventName, key, value) {
+      clevertap.event.push(eventName, {
+        key: value
+      });
+    }
+
+    async function fetchFirebase() {
+
+      let listCallback = new Map();
+      await remoteConfig.fetchAndActivate()
+        .then(() => {
+          listCallback['how_to_play_url'] = remoteConfig.getValue('how_to_play_url')._value;
+          listCallback['ticket_term_url'] = remoteConfig.getValue('ticket_term_url')._value;
+          listCallback['gg_rule_url_th'] = remoteConfig.getValue('gg_rule_url_th')._value;
+          listCallback['gg_livescore_web'] = remoteConfig.getValue('gg_livescore_web')._value;
+          listCallback['gg_news_web'] = remoteConfig.getValue('gg_news_web')._value;
+          listCallback['gg_base_endpoint'] = remoteConfig.getValue('gg_base_endpoint')._value;
+          listCallback['gg_stat_endpoint'] = remoteConfig.getValue('gg_stat_endpoint')._value;
+          listCallback['gg_user_endpoint'] = remoteConfig.getValue('gg_user_endpoint')._value;
+          listCallback['gg_package_endpoint'] = remoteConfig.getValue('gg_package_endpoint')._value;
+          listCallback['gg_force_update_flag'] = remoteConfig.getValue('gg_force_update_flag')._value;
+          listCallback['gg_current_appversion'] = remoteConfig.getValue('gg_current_appversion')._value;
+          listCallback['gg_rule_url'] = remoteConfig.getValue('gg_rule_url')._value;
+          listCallback['gg_term_url'] = remoteConfig.getValue('gg_term_url')._value;
+          listCallback['fb_message'] = remoteConfig.getValue('fb_message')._value;
+          listCallback['stat_api_key'] = remoteConfig.getValue('stat_api_key')._value;
+          listCallback['gg_fav_endpoint'] = remoteConfig.getValue('gg_fav_endpoint')._value;
+
+          rules = JSON.stringify(listCallback);
+        })
+        .catch((err) => {
+          console.error('Firebase Remote Config failed to initialize', err);
+          rules = "nulllll";
+        });
+      return rules;
     }
 
 
 
-
-</script>
-
-<script >
-
-  function createInitWebPush(name,id,email,phone,photo){
-    clevertap.profile.push({
-        "Site": {
-            "Name": name,
-            "Identity": id,
-            "Email": email,
-            "Phone": phone,
-            "Photo": photo,
-            "MSG-push": true,
-        }
-    });
-    clevertap.notifications.push({
-      "apnsWebPushId" : "web.com.sd-mobile",
-      "apnsWebPushServiceUrl" : "https://safaritestpush.herokuapp.com",
-      "titleText":'Would you like to receive Push Notifications?',
-      "bodyText":'We promise to only send you relevant content and give you updates on your transactions',
-      "okButtonText":'Sign me up!',
-      "rejectButtonText":'No thanks',
-      "okButtonColor":'#f28046',
-      "serviceWorkerPath" : "clevertap_sw.js"
-      });
-  }
-
-  function cleverTapLoginSocial(eventName){
-    clevertap.event.push(eventName);
-  }
-
-  function uploadEventLogin(eventName,key,value){
-
-   console.log("eventName :"+eventName);
-    clevertap.event.push(eventName,{
-        key : value
-    });
-  }
-
-  function uploadEventSignUp(eventName){
-
-   console.log("eventName :"+eventName);
-    clevertap.event.push(eventName);
-  }
-
-  function uploadEventFantasy(eventName){
-
-   console.log("eventName :"+eventName);
-    clevertap.event.push(eventName);
-  }
-
-  function uploadEventFantasyPlayGame(eventName){
-    clevertap.event.push(eventName);
-  }
-
-  function uploadEventSubscript(eventName,key,value){
-        clevertap.event.push(eventName,{
-            key : value
-        });
-  }
-
-  function uploadEventStats(eventName){
-    clevertap.event.push(eventName);
-  }
-
-  function uploadEventMyProfile(eventName,key,value){
-        clevertap.event.push(eventName,{
-            key : value
-        });
-  }
-
-  async function fetchFirebase(){
-
-  let listCallback = new Map();
-  await remoteConfig.fetchAndActivate()
-  .then(() => {
-    listCallback['how_to_play_url'] = remoteConfig.getValue('how_to_play_url')._value;
-    listCallback['ticket_term_url'] = remoteConfig.getValue('ticket_term_url')._value;
-    listCallback['gg_rule_url_th'] = remoteConfig.getValue('gg_rule_url_th')._value;
-    listCallback['gg_livescore_web'] = remoteConfig.getValue('gg_livescore_web')._value;
-    listCallback['gg_news_web'] = remoteConfig.getValue('gg_news_web')._value;
-    listCallback['gg_base_endpoint'] = remoteConfig.getValue('gg_base_endpoint')._value;
-    listCallback['gg_stat_endpoint'] = remoteConfig.getValue('gg_stat_endpoint')._value;
-    listCallback['gg_user_endpoint'] = remoteConfig.getValue('gg_user_endpoint')._value;
-    listCallback['gg_package_endpoint'] = remoteConfig.getValue('gg_package_endpoint')._value;
-    listCallback['gg_force_update_flag'] = remoteConfig.getValue('gg_force_update_flag')._value;
-    listCallback['gg_current_appversion'] = remoteConfig.getValue('gg_current_appversion')._value;
-    listCallback['gg_rule_url'] = remoteConfig.getValue('gg_rule_url')._value;
-    listCallback['gg_term_url'] = remoteConfig.getValue('gg_term_url')._value;
-    listCallback['fb_message'] = remoteConfig.getValue('fb_message')._value;
-    listCallback['stat_api_key'] = remoteConfig.getValue('stat_api_key')._value;
-    listCallback['gg_fav_endpoint'] = remoteConfig.getValue('gg_fav_endpoint')._value;
-
-     rules = JSON.stringify(listCallback);
-  })
-  .catch((err) => {
-    console.error('Firebase Remote Config failed to initialize', err);
-    rules = "nulllll";
-  });
-  return rules;
-  }
+    function onCrop(input) {
+      resource = input;
+      console.log('onCroponCroponCroponCroponCroponCrop');
+      $('#cropImagePop').modal('show');
 
 
-</script>
+    }
 
-<script src="main.dart.js?version=34" type="application/javascript"></script>
+    const base64abc = [
+      "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
+      "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",
+      "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
+      "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
+      "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "+", "/"
+    ];
+
+
+    function bytesToBase64(bytes) {
+      let result = '', i, l = bytes.length;
+      for (i = 2; i < l; i += 3) {
+        result += base64abc[bytes[i - 2] >> 2];
+        result += base64abc[((bytes[i - 2] & 0x03) << 4) | (bytes[i - 1] >> 4)];
+        result += base64abc[((bytes[i - 1] & 0x0F) << 2) | (bytes[i] >> 6)];
+        result += base64abc[bytes[i] & 0x3F];
+      }
+      if (i === l + 1) { // 1 octet yet to write
+        result += base64abc[bytes[i - 2] >> 2];
+        result += base64abc[(bytes[i - 2] & 0x03) << 4];
+        result += "==";
+      }
+      if (i === l) { // 2 octets yet to write
+        result += base64abc[bytes[i - 2] >> 2];
+        result += base64abc[((bytes[i - 2] & 0x03) << 4) | (bytes[i - 1] >> 4)];
+        result += base64abc[(bytes[i - 1] & 0x0F) << 2];
+        result += "=";
+      }
+      return result;
+    }
+
+
+
+  </script>
+
+<script src="main.dart.js?version=35_3" type="application/javascript"></script>
 <script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '344889890256334',
-      cookie     : true,
-      xfbml      : true,
-      version    : 'v8.0',
-      status     : true,
-    });
+    window.fbAsyncInit = function () {
+      FB.init({
+        appId: '344889890256334',
+        cookie: true,
+        xfbml: true,
+        version: 'v8.0',
+        status: true,
+      });
 
-    FB.AppEvents.logPageView();
+      FB.AppEvents.logPageView();
 
-  };
+    };
 
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "https://connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) { return; }
+      js = d.createElement(s); js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
 
-</script>
+
+
+  </script>
+<div id="result_crop_byte"></div>
+
+<div class="modal fade" id="cropImagePop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                aria-hidden="true">&times;</span></button>
+
+      </div>
+      <div class="modal-body">
+        <div id="upload-demo"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" id="cropImageBtn" class="btn btn-primary">Crop</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 </body>
+
 </html>
