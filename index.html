@@ -13,7 +13,7 @@
   <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-remote-config.js"></script>
 
   <link rel='stylesheet prefetch'
-        href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+    href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
   <link rel='stylesheet prefetch' href='https://foliotek.github.io/Croppie/croppie.css'>
   <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
@@ -69,11 +69,11 @@
 
   </script>
   <meta name="google-signin-client_id"
-        content="441811997411-no437ge6i6tts0kosk7g1jcb0i1khln9.apps.googleusercontent.com">
+    content="441811997411-no437ge6i6tts0kosk7g1jcb0i1khln9.apps.googleusercontent.com">
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <meta name="description"
-        content="Khobsanam GG provides you complete and the most updated football news, analyses, stats, and results exclusively to you.">
+    content="Khobsanam GG provides you complete and the most updated football news, analyses, stats, and results exclusively to you.">
 
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -89,11 +89,11 @@
 </head>
 
 <body>
-<!-- This script installs service_worker.js to provide PWA functionality to
+  <!-- This script installs service_worker.js to provide PWA functionality to
    application. For more information, see:
    https://developers.google.com/web/fundamentals/primers/service-workers -->
 
-<script>
+  <script>
 
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {
@@ -103,7 +103,7 @@
 
     var resource;
 
-    $('document').ready(function(){
+    $('document').ready(function () {
       console.log("onreadyonreadyonreadyonreadyonready")
       var image_crop = $('#upload-demo').croppie({
         viewport: {
@@ -126,8 +126,23 @@
       $('#cropImageBtn').click(function () {
         console.log('clickkkkkkk')
         image_crop.croppie('result', { type: 'blob', format: 'png' }).then(function (blob) {
+          // var arrayBuffer;
+          // var fileReader = new FileReader();
+          // fileReader.onload = function () {
+          //   arrayBuffer = this.result;
+          //   var byteArray = new Uint8Array(arrayBuffer);
+          //   console.log('byte cropppp :'+byteArray);
+          //   $('#result_crop_byte').text(byteArray)
+            
+          // };
+          // fileReader.readAsArrayBuffer(blob);
 
-
+          new Response(blob).arrayBuffer().then(function(value){
+            var byteArray = new Uint8Array(value);
+            console.log('byte cropppp :'+byteArray);
+            $('#result_crop_byte').text(byteArray)
+            $('#cropImagePop').modal('hide');
+          });
 
         });
       });
@@ -140,7 +155,7 @@
 
   </script>
 
-<script>
+  <script>
 
 
 
@@ -286,8 +301,8 @@
 
   </script>
 
-<script src="main.dart.js?version=35_3" type="application/javascript"></script>
-<script>
+  <script src="main.dart.js?version=35_3" type="application/javascript"></script>
+  <script>
     window.fbAsyncInit = function () {
       FB.init({
         appId: '344889890256334',
@@ -312,27 +327,27 @@
 
 
   </script>
-<div id="result_crop_byte"></div>
+  <div id="result_crop_byte"></div>
 
-<div class="modal fade" id="cropImagePop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                aria-hidden="true">&times;</span></button>
+  <div class="modal fade" id="cropImagePop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">&times;</span></button>
 
-      </div>
-      <div class="modal-body">
-        <div id="upload-demo"></div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" id="cropImageBtn" class="btn btn-primary">Crop</button>
+        </div>
+        <div class="modal-body">
+          <div id="upload-demo"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" id="cropImageBtn" class="btn btn-primary">Crop</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
 
 
